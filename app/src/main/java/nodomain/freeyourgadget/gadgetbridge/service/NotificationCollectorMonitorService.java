@@ -62,8 +62,9 @@ public class NotificationCollectorMonitorService extends Service {
 
             // Placeholder notification
             Notification notification = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
-                    .setContentTitle("")
-                    .setContentText("").build();
+                    .setContentTitle("Gadgetbridge")
+                    .setContentText("")
+                    .build();
 
             startForeground(1, notification);
         }
