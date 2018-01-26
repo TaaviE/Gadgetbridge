@@ -35,6 +35,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
+import nodomain.freeyourgadget.gadgetbridge.R;
 import nodomain.freeyourgadget.gadgetbridge.externalevents.NotificationListener;
 
 import static nodomain.freeyourgadget.gadgetbridge.GBApplication.isRunningMarshmallowOrLater;
@@ -53,7 +54,7 @@ public class NotificationCollectorMonitorService extends Service {
         super.onCreate();
         if (isRunningMarshmallowOrLater()) {
             NotificationChannel channel = new NotificationChannel(NOTIFICATION_CHANNEL_ID,
-                    "Gadgetbridge notifications",
+                    getString(R.string.notification_channel_name),
                     NotificationManager.IMPORTANCE_LOW);
 
             // Create notification channel required
